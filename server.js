@@ -16,18 +16,15 @@ const authRoutes = require('./routes/authRoutes');
 
 
 
+// Set up CORS
 const corsOptions = {
     origin: 'https://aquamarine-stardust-eeeab5.netlify.app',
-    // Other options if needed...
+    credentials: true,
 };
-
-
-app.use(cors({ credentials: true, origin: 'https://aquamarine-stardust-eeeab5.netlify.app' }));
-
 
 app.use(bodyParser.json());
 
-app.use(cors());
+app.use(cors(corsOptions));
 
 app.use(express.json());
 
