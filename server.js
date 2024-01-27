@@ -22,7 +22,8 @@ const corsOptions = {
 };
 
 
-app.use(cors(corsOptions));
+app.use(cors({ credentials: true, origin: 'https://aquamarine-stardust-eeeab5.netlify.app' }));
+
 
 app.use(bodyParser.json());
 
