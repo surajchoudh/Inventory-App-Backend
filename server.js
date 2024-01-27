@@ -16,6 +16,13 @@ const authRoutes = require('./routes/authRoutes');
 
 
 
+const corsOptions = {
+    origin: 'https://aquamarine-stardust-eeeab5.netlify.app',
+    // Other options if needed...
+};
+
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
 
